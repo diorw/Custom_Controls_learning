@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.vp);
-        mviewpager=(ViewPager)findViewById(R.id.mviewpager);
+        setContentView(R.layout.activity_main);
+        /*mviewpager=(ViewPager)findViewById(R.id.mviewpager);
         mviewpager.setAdapter(new PagerAdapter() {
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
@@ -43,6 +43,6 @@ public class MainActivity extends AppCompatActivity {
             public boolean isViewFromObject(View view, Object object) {
                 return view ==object;
             }
-        });
+        });*/
     }
 }

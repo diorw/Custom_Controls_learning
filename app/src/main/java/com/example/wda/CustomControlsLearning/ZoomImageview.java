@@ -17,6 +17,8 @@ import android.widget.ImageView;
 
 /**
  * Created by wda on 2017/7/18.
+ * 慕课教程源码
+ * 实现了多点触控，双击放大缩小，自由移动，解决与viewpager的冲突
  */
 public class ZoomImageview extends ImageView implements ViewTreeObserver.OnGlobalLayoutListener,ScaleGestureDetector.OnScaleGestureListener,OnTouchListener{
     private boolean once=false;

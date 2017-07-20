@@ -6,10 +6,7 @@
 
     >
 
-    <com.example.wda.CustomControlsLearning.ZoomImageview
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:src="@drawable/monstor"
-        android:scaleType="matrix"
-        ></com.example.wda.CustomControlsLearning.ZoomImageview>
+    <com.example.wda.CustomControlsLearning.Radoview
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>
