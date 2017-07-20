@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
+import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -284,8 +285,21 @@ public class ZoomImageview extends ImageView implements ViewTreeObserver.OnGloba
             mLastY=y;
         }
         mLastPointerCount=pointerCount;
+        RectF rectf = getMaterixRectF();
         switch (event.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                //当图片被放大的时候请求事件不被父view拦截
+                if(rectf.width()>getWidth()+0.01||rectf.height()>getHeight()+0.01){
+                    if(getParent() instanceof ViewPager)
+                    getParent().requestDisallowInterceptTouchEvent(true);
+                }
+                break;
             case MotionEvent.ACTION_MOVE:
+
+                if(rectf.width()>getWidth()+0.01||rectf.height()>getHeight()+0.01){
+                    if(getParent() instanceof ViewPager)
+                        getParent().requestDisallowInterceptTouchEvent(true);
+                }
                 float dx = x-mLastX;
                 float dy = y-mLastY;
                 //判断移动距离是否可认为是移动
