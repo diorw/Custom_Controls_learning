@@ -131,7 +131,9 @@ public class Radoview extends View {
             lastX = x;
             lastY = y;
             if(radius==maxradius){
-                canvas.drawText(keys[i],(float)(lastX-20),(float)lastY+20,painttext);
+                float textsize = painttext.measureText(keys[i]);
+
+                canvas.drawText(keys[i],(float)(lastX-25),(float)lastY+25,painttext);
             }
 
         }
