@@ -6,6 +6,7 @@ import android.os.Handler;
 
 /**
  * Created by wda on 2017/7/24.
+ * 张鸿洋慕课 打造个性化进度条
  */
 public class ProgressTestActivity extends Activity {
     private static final int MSG_UPDATE = 0x110;
@@ -24,7 +25,7 @@ public class ProgressTestActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.test_of_progressbar_layout);
 //        mProgress = (HorizontalProgressbarWithProgress)findViewById(R.id.progress1);
 //        mHandler.sendEmptyMessage(MSG_UPDATE);
 

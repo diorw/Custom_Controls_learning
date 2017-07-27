@@ -1,14 +1,16 @@
 package com.example.wda.CustomControlsLearning;
 
+import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+/*
+* zoomimageview 测试*/
+public class ZoomImageviewTestActivity extends AppCompatActivity {
     private ViewPager mviewpager;
     private int[] imgs = new int[]{R.drawable.boss,R.drawable.monstor};
     private ImageView[] mImageview = new ImageView[imgs.length];
@@ -17,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        /*mviewpager=(ViewPager)findViewById(R.id.mviewpager);
+        setContentView(R.layout.test_of_zoomiamgeview_layout);
+        mviewpager=(ViewPager)findViewById(R.id.mviewpager);
         mviewpager.setAdapter(new PagerAdapter() {
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
@@ -43,6 +45,6 @@ public class MainActivity extends AppCompatActivity {
             public boolean isViewFromObject(View view, Object object) {
                 return view ==object;
             }
-        });*/
+        });
     }
 }
