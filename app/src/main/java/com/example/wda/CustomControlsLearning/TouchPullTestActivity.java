@@ -35,6 +35,9 @@ public class TouchPullTestActivity extends AppCompatActivity {
                             touchPullView.setProgress(progress);
                         }
                         return true;
+                    case MotionEvent.ACTION_UP:
+                        touchPullView.release();
+                        break;
                     default:
                         break;
                 }
